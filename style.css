@@ -97,6 +97,13 @@ img{ max-width:100%; display:block; }
 }
 .btn-line:hover{ box-shadow: 0 8px 22px rgba(6,199,85,.45); }
 
+.btn-brown{
+  background: linear-gradient(135deg, var(--c-gold), var(--c-gold-deep));
+  color:#fff;
+  box-shadow: 0 6px 18px rgba(156,122,69,.35);
+}
+.btn-brown:hover{ box-shadow: 0 8px 22px rgba(156,122,69,.45); }
+
 .btn-small{
   padding: 9px 16px;
   font-size: .82rem;
