@@ -143,8 +143,8 @@ img{ max-width:100%; display:block; }
 .hero-compass{
   position:absolute;
   top:48%; left:50%;
-  width: min(1360px, 300vw);
-  height: min(1360px, 300vw);
+  width: 130vw;
+  height: 130vw;
   transform: translate(-50%,-50%);
   background-image:url('images/compass.jpg');
   background-size:contain;
@@ -707,6 +707,7 @@ img{ max-width:100%; display:block; }
   .hero{ padding: 96px 0 80px; }
   .voice-grid{ grid-template-columns: repeat(3,1fr); }
   .sp-only{ display:none; }
+  .hero-compass{ width: min(1360px, 150vw); height: min(1360px, 150vw); }
 }
 
 /* ---------- Scroll fade-in ---------- */
