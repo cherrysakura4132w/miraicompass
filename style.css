@@ -142,7 +142,7 @@ img{ max-width:100%; display:block; }
 }
 .hero-compass{
   position:absolute;
-  top:48%; left:50%;
+  top:38%; left:50%;
   width: 130vw;
   height: 130vw;
   transform: translate(-50%,-50%);
