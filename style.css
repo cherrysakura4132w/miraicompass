@@ -333,24 +333,26 @@ img{ max-width:100%; display:block; }
 .empathy-body strong{ color:#9C4C57; }
 
 /* ---------- Solution / 10 types ---------- */
-.type-grid{
-  list-style:none;
-  display:grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  padding:0; margin: 0 0 36px;
-  text-align:center;
+.type-frame{
+  position:relative;
+  margin: 0 0 36px;
+  padding: 22px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(239,223,195,.5), transparent 60%),
+    var(--c-bg-card);
+  border: 1px solid var(--c-gold-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow), inset 0 0 0 1px rgba(255,255,255,.6);
 }
-.type-grid li{
-  background: var(--c-bg-card);
-  border:1px solid var(--c-line);
-  border-radius: var(--radius);
-  padding: 14px 6px;
-  font-size: .78rem;
-  color: var(--c-text-soft);
-  box-shadow: var(--shadow-soft);
+.type-frame::before{
+  content:"";
+  position:absolute; inset:8px;
+  border: 1px solid var(--c-gold);
+  border-radius: calc(var(--radius-lg) - 8px);
+  opacity:.5;
+  pointer-events:none;
 }
-.type-icon{ display:block; font-size:1.5rem; margin-bottom:6px; }
+.type-frame img{ position:relative; border-radius: calc(var(--radius-lg) - 14px); }
 
 .feature-row{
   display:grid;
@@ -700,7 +702,6 @@ img{ max-width:100%; display:block; }
    Tablet / Desktop
 ========================================================== */
 @media (min-width: 640px){
-  .type-grid{ grid-template-columns: repeat(5,1fr); }
   .info-grid{ grid-template-columns: 1fr 1fr; }
   .price-card{ grid-template-columns: 1fr 1fr 1fr; align-items:center; }
   .price-card-col-price{ border-top:none; border-bottom:none; border-left:1px dashed var(--c-line); border-right:1px dashed var(--c-line); }
