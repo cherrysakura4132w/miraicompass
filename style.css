@@ -571,12 +571,7 @@ img{ max-width:100%; display:block; }
   width:96px; height:96px;
   border-radius:50%;
   margin: 0 auto 16px;
-  background: linear-gradient(145deg, var(--c-pink), var(--c-gold-soft));
-  color: var(--c-gold-deep);
-  display:flex; align-items:center; justify-content:center;
-  font-family: var(--font-serif-jp);
-  font-weight:700;
-  font-size:1.1rem;
+  object-fit:cover;
   box-shadow: var(--shadow);
 }
 .profile-story{
@@ -605,6 +600,16 @@ img{ max-width:100%; display:block; }
 }
 
 /* ---------- Voice / testimonials ---------- */
+.section-voice{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(243,217,221,.5), transparent 45%),
+    radial-gradient(circle at 88% 90%, rgba(239,223,195,.55), transparent 50%),
+    var(--c-bg-soft);
+}
+.section-voice .container{ position:relative; z-index:1; }
+.voice-sparkles{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
 .voice-grid{
   display:grid;
   gap: 16px;
