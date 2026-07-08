@@ -140,6 +140,55 @@ img{ max-width:100%; display:block; }
     radial-gradient(circle at 50% 100%, rgba(243,217,221,.4), transparent 60%),
     var(--c-bg);
 }
+.hero-compass{
+  position:absolute;
+  top:48%; left:50%;
+  width: min(1360px, 300vw);
+  height: min(1360px, 300vw);
+  transform: translate(-50%,-50%);
+  background-image:url('images/compass.jpg');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  mix-blend-mode:multiply;
+  opacity:.5;
+  z-index:0;
+  pointer-events:none;
+  animation: compass-spin 100s linear infinite, compass-glow 5s ease-in-out infinite;
+}
+@keyframes compass-spin{
+  from{ transform: translate(-50%,-50%) rotate(0deg); }
+  to{ transform: translate(-50%,-50%) rotate(360deg); }
+}
+@keyframes compass-glow{
+  0%,100%{ opacity:.38; }
+  50%{ opacity:.6; }
+}
+
+.hero-sparkles{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+.sparkle{
+  position:absolute;
+  color: var(--c-gold);
+  text-shadow: 0 0 6px rgba(184,144,90,.7);
+  opacity:0;
+  animation: sparkle-twinkle 3.4s ease-in-out infinite;
+}
+.sparkle.s1{ top:10%; left:14%; font-size:.9rem; animation-delay:.1s; }
+.sparkle.s2{ top:18%; left:80%; font-size:1.3rem; animation-delay:1.2s; }
+.sparkle.s3{ top:62%; left:8%;  font-size:.8rem;  animation-delay:.7s; }
+.sparkle.s4{ top:72%; left:86%; font-size:1.1rem; animation-delay:2s; }
+.sparkle.s5{ top:6%;  left:52%; font-size:.7rem;  animation-delay:2.5s; }
+.sparkle.s6{ top:46%; left:92%; font-size:1rem;   animation-delay:1.6s; }
+.sparkle.s7{ top:38%; left:5%;  font-size:1rem;   animation-delay:.9s; }
+@keyframes sparkle-twinkle{
+  0%,100%{ opacity:0; transform:scale(.4) rotate(0deg); }
+  50%{ opacity:1; transform:scale(1) rotate(20deg); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-compass, .sparkle{ animation:none; }
+}
+
 .hero-inner{ position:relative; z-index:1; }
 
 .hero-brand{
