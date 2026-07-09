@@ -670,6 +670,7 @@ img{ max-width:100%; display:block; }
 .cta-inner{ display:flex; flex-direction:column; align-items:center; }
 .btn-cta-final{ font-size: 1.05rem; padding: 18px 30px; }
 .cta-note{ margin-top:16px; font-size:.8rem; color: var(--c-text-soft); }
+.voice-note{ margin-top:24px; font-size:.75rem; color: var(--c-text-soft); text-align:center; line-height:1.7; }
 
 /* ---------- Footer ---------- */
 .site-footer{
